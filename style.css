@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f8f8;
+  color: #333;
+}
+
+header {
+  background: #0077b6;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 { margin: 0; }
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.banner {
+  background: #0096c7;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.acoes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+.box {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 10px 20px;
+  background: #0077b6;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-secundario {
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 10px 20px;
+  background: #90e0ef;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.quem-somos {
+  background: #e9ecef;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer {
+  background: #0077b6;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}

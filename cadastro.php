@@ -23,16 +23,16 @@ $tipo = $_GET['tipo'] ?? '';
         <input type="hidden" name="tipo" value="paciente">
 
         <label>Nome</label>
-        <input type="text" name="nome" required>
+        <input type="text" name="nome" required><br>
 
         <label>Email</label>
-        <input type="email" name="email" required>
+        <input type="email" name="email" required><br>
 
         <label>Senha</label>
-        <input type="password" name="senha" required>
+        <input type="password" name="senha" required><br>
 
         <label>Data de Nascimento</label>
-        <input type="date" name="data_nascimento">
+        <input type="date" name="data_nascimento"><br>
 
         <button type="submit">Cadastrar</button>
       </form>
@@ -44,19 +44,19 @@ $tipo = $_GET['tipo'] ?? '';
         <input type="hidden" name="tipo" value="medico">
 
         <label>Nome</label>
-        <input type="text" name="nome" required>
+        <input type="text" name="nome" required><br>
 
         <label>Email</label>
-        <input type="email" name="email" required>
+        <input type="email" name="email" required><br>
 
         <label>Senha</label>
-        <input type="password" name="senha" required>
+        <input type="password" name="senha" required><br>
 
         <label>Especialidade</label>
-        <input type="text" name="especialidade" required>
+        <input type="text" name="especialidade" required><br>
 
         <label>Registro Profissional (CRM/CNPJ)</label>
-        <input type="text" name="registro_profissional">
+        <input type="text" name="registro_profissional"><br>
 
         <!-- NOVO CAMPO: Plano de Assinatura -->
         <label>Plano de Assinatura</label>
@@ -66,7 +66,7 @@ $tipo = $_GET['tipo'] ?? '';
           <option value="2">Trimestral - R$ 350,00/mês</option>
           <option value="3">Semestral - R$ 300,00/mês</option>
           <option value="4">Anual - R$ 200,00/mês</option>
-        </select>
+        </select><br>
 
         <button type="submit">Cadastrar</button>
       </form>
@@ -77,3 +77,4 @@ $tipo = $_GET['tipo'] ?? '';
   </main>
 </body>
 </html>
+

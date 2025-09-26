@@ -1,75 +1,248 @@
-<?php
-// index.php - Página inicial DoctorLink
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DoctorLink — Agendamento e Prontuário Integrados</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Agendamento rápido, prontuário eletrônico seguro e gestão integrada de atendimentos e faturamento. Reduza erros e economize tempo com o DoctorLink." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Cabeçalho / Menu -->
-  <header>
-    <h1>DoctorLink</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="#quem-somos">Quem Somos</a></li>
+  <!-- Skip link de acessibilidade -->
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 
-      </ul>
-    </nav>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#" aria-label="DoctorLink - Página inicial">
+        <span class="brand__logo" aria-hidden="true">＋</span>
+        <span class="brand__text">DoctorLink</span>
+      </a>
+
+      <!-- Menu responsivo (sem JS) -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Abrir menu" />
+      <label for="nav-toggle" class="nav-toggle-btn" aria-hidden="true" title="Abrir/fechar menu">
+        ☰
+      </label>
+
+      <nav class="nav" aria-label="Principal">
+        <ul>
+          <li><a href="#recursos">Recursos</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#seguranca">Segurança</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a class="btn btn--sm" href="#contato">Teste grátis</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- Banner inicial -->
-  <section class="banner">
-    <h2>Conectando Pacientes e Clínicas de forma rápida e segura</h2>
-    <p>Agende sua consulta online ou cadastre sua clínica para ampliar seus atendimentos.</p>
-  </section>
+  <main id="conteudo">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <h1>Agendamento rápido, prontuário eletrônico seguro e gestão integrada</h1>
+          <p>O <strong>DoctorLink</strong> conecta pacientes, médicos e equipe em um único lugar — reduzindo erros, economizando tempo e elevando a experiência de ponta a ponta.</p>
+          <div class="hero__cta">
+            <a class="btn" href="#contato">Começar agora</a>
+            <a class="btn btn--ghost" href="#recursos">Ver recursos</a>
+          </div>
+          <ul class="hero__bullets" aria-label="Destaques">
+            <li>Agendamento preciso com confirmação instantânea</li>
+            <li>Prontuário eletrônico (PEP) com histórico unificado</li>
+            <li>Faturamento e atendimentos integrados</li>
+            <li>LGPD, criptografia e trilhas de auditoria</li>
+          </ul>
+        </div>
+        <div class="hero__card" role="img" aria-label="Ilustração de agenda e prontuário integrados">
+          <div class="card">
+            <h3>Próximos atendimentos</h3>
+            <ul class="list list--compact">
+              <li><span>09:00</span> Teleconsulta — Clínica Geral</li>
+              <li><span>10:30</span> Retorno — Cardiologia</li>
+              <li><span>13:15</span> Avaliação — Dermatologia</li>
+              <li><span>15:00</span> Telepsicologia</li>
+            </ul>
+            <a class="link" href="#recursos">Ver agenda completa →</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Áreas de escolha -->
-  <section class="acoes">
-    <div class="box paciente">
-      <h3>Sou Paciente</h3>
-      <p>Agende sua consulta online com rapidez, escolha médicos por especialidade e acompanhe seu histórico.</p>
-      <a href="cadastro.php?tipo=paciente" class="btn">Cadastre-se</a>
-      <a href="login.php?tipo=paciente" class="btn-secundario">Já tenho conta</a>
+    <!-- Recursos -->
+    <section id="recursos" class="section">
+      <div class="container">
+        <header class="section__head">
+          <h2>Recursos que fazem a diferença</h2>
+          <p>Simplifique o dia a dia e entregue uma experiência impecável para pacientes e equipe.</p>
+        </header>
+
+        <div class="grid-3">
+          <article class="feature">
+            <div class="feature__icon" aria-hidden="true">🗓️</div>
+            <h3>Agendamento inteligente</h3>
+            <p>Evite choques de horário com regras de disponibilidade, confirmação automática e lembretes ao paciente.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature__icon" aria-hidden="true">📋</div>
+            <h3>Prontuário eletrônico</h3>
+            <p>Histórico clínico, exames e prescrições digitais em um só lugar, com controle de acesso por perfil.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature__icon" aria-hidden="true">💳</div>
+            <h3>Faturamento integrado</h3>
+            <p>Do atendimento ao recebimento: glosas, lote de guias e relatórios financeiros sem dor de cabeça.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature__icon" aria-hidden="true">🔒</div>
+            <h3>Segurança e LGPD</h3>
+            <p>Criptografia em trânsito e em repouso, logs de auditoria e consentimento de uso de dados.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature__icon" aria-hidden="true">📈</div>
+            <h3>Analytics em tempo real</h3>
+            <p>Indicadores de produtividade, taxa de absenteísmo e faturamento por período, profissional e convênio.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature__icon" aria-hidden="true">⚙️</div>
+            <h3>Workflows configuráveis</h3>
+            <p>Automatize confirmações, pós-consulta e envio de documentos com fluxos visuais simples.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Como funciona -->
+    <section id="como-funciona" class="section section--muted">
+      <div class="container">
+        <header class="section__head">
+          <h2>Como funciona</h2>
+        </header>
+        <ol class="steps">
+          <li>
+            <h4>1. Cadastre sua clínica</h4>
+            <p>Defina especialidades, agendas, salas e convênios em poucos minutos.</p>
+          </li>
+          <li>
+            <h4>2. Configure o prontuário</h4>
+            <p>Modelos de anamnese, prescrições e solicitações de exames personalizáveis.</p>
+          </li>
+          <li>
+            <h4>3. Atenda e fature</h4>
+            <p>Fluxo do atendimento ao faturamento sem re-trabalho e com menos erros.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Segurança -->
+    <section id="seguranca" class="section">
+      <div class="container">
+        <header class="section__head">
+          <h2>Segurança em primeiro lugar</h2>
+          <p>Proteção de dados sensíveis do paciente com conformidade LGPD.</p>
+        </header>
+        <div class="security grid-3">
+          <div class="security__item">
+            <h4>Criptografia</h4>
+            <p>HTTPS/TLS e dados cifrados em repouso.</p>
+          </div>
+          <div class="security__item">
+            <h4>Controle de acesso</h4>
+            <p>Perfis, MFA e segregação de funções.</p>
+          </div>
+          <div class="security__item">
+            <h4>Auditoria</h4>
+            <p>Trilha completa de visualizações e alterações no PEP.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Planos -->
+    <section id="planos" class="section section--muted">
+      <div class="container">
+        <header class="section__head">
+          <h2>Planos simples e transparentes</h2>
+        </header>
+        <div class="pricing grid-3">
+          <div class="price-card">
+            <h3>Start</h3>
+            <p class="price">R$ 89<span>/mês</span></p>
+            <ul class="list">
+              <li>1 profissional</li>
+              <li>Agendamento + PEP</li>
+              <li>Suporte por e-mail</li>
+            </ul>
+            <a class="btn btn--block" href="#contato">Assinar</a>
+          </div>
+          <div class="price-card price-card--featured" aria-label="Plano mais popular">
+            <div class="badge">Popular</div>
+            <h3>Clinic</h3>
+            <p class="price">R$ 199<span>/mês</span></p>
+            <ul class="list">
+              <li>Até 5 profissionais</li>
+              <li>PEP + Faturamento</li>
+              <li>Lembretes automáticos</li>
+            </ul>
+            <a class="btn btn--block" href="#contato">Assinar</a>
+          </div>
+          <div class="price-card">
+            <h3>Enterprise</h3>
+            <p class="price">Sob consulta</p>
+            <ul class="list">
+              <li>Usuários ilimitados</li>
+              <li>SSO, MFA e SLA</li>
+              <li>Implantação assistida</li>
+            </ul>
+            <a class="btn btn--block" href="#contato">Falar com vendas</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato / CTA final -->
+    <section id="contato" class="section">
+      <div class="container">
+        <div class="cta">
+          <h2>Pronto para reduzir erros e ganhar eficiência?</h2>
+          <p>Teste o DoctorLink gratuitamente por 14 dias. Sem cartão de crédito.</p>
+          <form class="cta__form" action="cadastro.html" method="get" aria-label="Formulário de teste grátis">
+            <button class="btn" type="submit">Criar conta grátis</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a class="brand brand--footer" href="#">
+          <span class="brand__logo" aria-hidden="true">＋</span>
+          <span class="brand__text">DoctorLink</span>
+        </a>
+        <p class="footer__about">Tecnologia que aproxima, cuidado que transforma.</p>
+      </div>
+      <nav aria-label="Rodapé">
+        <ul class="footer__links">
+          <li><a href="#recursos">Recursos</a></li>
+          <li><a href="#seguranca">Segurança</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="footer__legal">
+        <small>© <span id="ano">2025</span> DoctorLink. Todos os direitos reservados.</small>
+      </div>
     </div>
-
-    <div class="box medico">
-      <h3>Sou Médico ou Clínica</h3>
-      <p>Cadastre-se no DoctorLink, gerencie seus agendamentos, prontuários e faturamento em um só lugar.</p>
-      <a href="cadastro.php?tipo=medico" class="btn">Cadastrar Clínica/Médico</a>
-      <a href="login.php?tipo=medico" class="btn-secundario">Já tenho conta</a>
-    </div>
-  </section>
-
-  <!-- Seção Quem Somos -->
-  <section id="quem-somos" class="quem-somos">
-    <h2>Quem Somos</h2>
-    <p>
-      O <strong>DoctorLink</strong> é uma plataforma desenvolvida para integrar pacientes e clínicas em um só sistema.
-      Nosso objetivo é simplificar o agendamento de consultas, garantir segurança no registro do prontuário eletrônico
-      e oferecer às clínicas um controle eficiente de atendimentos e faturamento.
-    </p>
-    <p>
-      Para os <strong>pacientes</strong>, oferecemos praticidade no agendamento e acompanhamento do histórico de saúde.  
-      Para os <strong>médicos e clínicas</strong>, disponibilizamos uma ferramenta completa para gestão de agenda,
-      prontuários digitais e relatórios financeiros.
-    </p>
-    <p>
-      Este projeto também se inspira em iniciativas como o <strong>TEDx</strong>, que incentivam comunidades a inovar,
-      empreender e desenvolver soluções próprias para transformar a realidade. Assim como o TEDx estimula a criação
-      de ideias que merecem ser espalhadas, o DoctorLink nasce como um exemplo de empreendedorismo estudantil voltado
-      para melhorar a área da saúde por meio da tecnologia.
-    </p>
-  </section>
-
-  <!-- Rodapé -->
-  <footer>
-    <p>&copy; <?php echo date("Y"); ?> DoctorLink — Todos os direitos reservados.</p>
   </footer>
 </body>
 </html>
